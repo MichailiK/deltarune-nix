@@ -60,11 +60,11 @@
         "nixpkgs-openssl": "nixpkgs-openssl"
       },
       "locked": {
-        "lastModified": 1751519208,
-        "narHash": "sha256-/WrScprCUegodiz2gbl1cDGltwnRLuOFKNd9waQMNeM=",
+        "lastModified": 1751559906,
+        "narHash": "sha256-b13/anralVk4zZCZ1HGEOlOdQGpkyWB0dJGSgBxXlN8=",
         "owner": "MichailiK",
         "repo": "yoyo-games-runner-nix",
-        "rev": "1185046843fa6d6d0fbef388f181732c9e295b42",
+        "rev": "a75889be9052a2fd428db76a1cb7b4f438024fc0",
         "type": "github"
       },
       "original": {

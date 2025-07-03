@@ -19,7 +19,7 @@ let
     src = (pkgs.callPackage deltaport {}) + "/deltarune";
     version = "v" + version;
     gameAssets = assets;
-
+    includeFFmpeg = true; # Chapter 3 contains video
   };
 in wrappedRunner.overrideAttrs (_: { postInstall ? "", ... }: {
     # Add the game switch helper script & Copy the yoyo games runner binary to
