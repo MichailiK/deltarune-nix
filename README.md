@@ -15,7 +15,7 @@ Steam account that [owns DELTARUNE](https://store.steampowered.com/app/1671210/D
 
 There are two methods of downloading a copy of DELTARUNE v1.01C:
 
-### Steam client:
+### Steam client
 
 1. Open `steam://open/console` to reveal the console
    tab & switch to it.
