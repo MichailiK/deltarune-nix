@@ -1,0 +1,103 @@
+From 1afab66e745ed01d4ca831e26508691f870dc489 Mon Sep 17 00:00:00 2001
+From: Michaili K <git@michaili.dev>
+Date: Mon, 30 Jun 2025 16:54:05 +0200
+Subject: [PATCH] adjust port for nix packaging
+
+---
+ port.sh | 72 ++++-----------------------------------------------------
+ 1 file changed, 5 insertions(+), 67 deletions(-)
+
+diff --git a/port.sh b/port.sh
+index 7437e33..8d40091 100755
+--- a/port.sh
++++ b/port.sh
+@@ -1,21 +1,8 @@
+-#!/bin/bash
+-if ! command -v rsync 2>&1 >/dev/null
+-then
+-	echo "rsync not found. Please install rsync using your package manager"
+-	exit 1
+-fi
+-
+-if ! command -v xdelta3 2>&1 >/dev/null
+-then
+-	echo "xdelta3 not found. Please install xdelta using your package manager"
+-	exit 1
+-fi
+-
+-DELTARUNEDIR=""
+-SCRIPTDIR=$(pwd)
++: "${DELTARUNEDIR:?environment variable DELTARUNEDIR has not been set}"
++: "${SCRIPTDIR:?environment variable SCRIPTDIR has not been set}"
+ 
+ function port_game() {
+-   echo ""
++   ORIGINALDIR=$(pwd)
+    cd $DELTARUNEDIR
+ 
+    echo -e "\e[1;34m::\e[0m \e[1mRenaming files\e[0m"
+@@ -80,59 +67,10 @@ function port_game() {
+    mv "$DELTARUNEDIR/chapter3_linux/assets/game.unx.1" "$DELTARUNEDIR/chapter3_linux/assets/game.unx"
+    mv "$DELTARUNEDIR/chapter4_linux/assets/game.unx.1" "$DELTARUNEDIR/chapter4_linux/assets/game.unx"
+ 
+-   echo -e "\e[1;34m::\e[0m \e[1mDownloading ffmpeg4 for video playback\e[0m"
+-   
+-   ln -s "$DELTARUNEDIR/chapter3_linux/assets/vid/tennaintrof1_compressed_28.mp4" "$DELTARUNEDIR/chapter3_linux/assets/vid/tennaIntroF1_compressed_28.mp4"
+-   ln -s "$DELTARUNEDIR/chapter3_linux/assets/vid/tennaintrojpf1_compressed_28.mp4" "$DELTARUNEDIR/chapter3_linux/assets/vid/tennaIntroJPf1_compressed_28.mp4"
+-   
+-   # Thanks u/flibitijibibo for the fix!
+-   cd "$DELTARUNEDIR/lib"
+-   wget "https://files.catbox.moe/explj6.bz2" -O ffmpeg4.tar.bz2
+-   tar -xvjf ffmpeg4.tar.bz2
+-   rm -rf ffmpeg4.tar.bz2
+-
+-   ln -sf "$DELTARUNEDIR/DELTARUNE.sh" "$DELTARUNEDIR/DELTARUNE.exe"
+-
+    echo -e "\e[1;32m SUCCESS! The port script finished. \e[0m"
+-   echo -e '\e[1;34m::\e[0m \e[1mTo play DELTARUNE, go to Steam -> DELTARUNE -> Properties -> Launch Options -> Put this: "./DELTARUNE.sh" %command% \e[0m'
+-   echo -e "\e[1;34m::\e[0m \e[1mOr, you can run ./DELTARUNE.sh in the game folder. (If you have issues with Steam, run the game this way)\e[0m"
+-   echo -e "\e[1;34m::\e[0m \e[1mEnjoy and have fun! \e[0m"
+-}
+-
+-function select_dir() {
+-   echo ""
+-   echo -e "\e[1;34m::\e[0m \e[1mPlease type the path of DELTARUNE below (eg. /home/pug/.local/share/Steam/steamapps/common/DELTARUNE):\e[0m"
+-   read path
+-
+-   if [ "$path" = "" ]; then
+-      exit;
+-   fi
+-
+-   if [ ! -d "$path" ]; then
+-      echo -e "\e[31mERROR: Directory dosen't exist, please try again\e[0m"
+-      exit;
+-   fi
+ 
+-   DELTARUNEDIR=$path
+-   port_game
++   cd $ORIGINALDIR
+ }
+ 
+-echo -e "\e[1;34mWelcome to the unofficial DELTARUNE Chapter 3 & 4 Linux port!\e[0m"
+-echo -e "\e[1;34mThis port is for version 1.01C\e[0m"
+-echo -e "\e[1;34mSince Chapter 3&4 are paid, you are gonna need to own a copy. This dosen't include any game data\e[0m"
+-echo ""
++port_game
+ 
+-if [ -d "$HOME/.steam/steam/steamapps/common/DELTARUNE" ]; then
+-	DELTARUNEDIR="$HOME/.steam/steam/steamapps/common/DELTARUNE"
+-	echo -e "\e[1;34m::\e[0m \e[1mDetected deltarune directory at $DELTARUNEDIR."
+-	while true; do
+-		read -p "Is this correct? [y/n]: " yn
+-		case $yn in
+-			[Yy]* ) port_game; break;;
+-			[Nn]* ) select_dir; break;;
+-			* ) select_dir; break;;
+-		    esac
+-		done
+-else
+-	select_dir
+-fi
+-- 
+2.49.0
+
