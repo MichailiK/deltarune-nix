@@ -17,7 +17,7 @@ There are two methods of downloading a copy of DELTARUNE v1.01C:
 
 ### Steam client:
 
-1. Open [`steam://open/console`](steam://open/console) to reveal the console
+1. Open `steam://open/console` to reveal the console
    tab & switch to it.
 2. In the console's text field, paste
    `download_depot 1671210 1671212 3006447521106301427`[^1]
