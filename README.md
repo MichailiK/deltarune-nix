@@ -57,27 +57,25 @@ You may launch DELTARUNE using the default package of this flake:
 $ NIXPKGS_ALLOW_UNFREE=1 NIXPKGS_ALLOW_INSECURE=1 nix run --impure github:MichailiK/deltarune-nix
 ```
 
-You may also launch the individual chapters 1 through 4:
-
-```sh
-$ ... nix run --impure github:MichailiK/deltarune-nix#ch1
-```
-
-or even launch individual chapters with [libTAS] for creating
+Or you may launch individual chapters, including with [libTAS] for creating
 Tool-assisted speedruns/superplays:
 
 ```sh
+# launch chapter 1 normally
+$ ... nix run --impure github:MichailiK/deltarune-nix#ch1
+# launch chapter 1 with libTAS
 $ ... nix run --impure github:MichailiK/deltarune-nix#ch1-libtas
 ```
 
 > [!IMPORTANT]
+> Launching individual chapters will not allow you to switch chapters. The game
+> will exit when trying to.
+>
 > Make sure you read the [TAS Caveats](#tas-caveats) section below for
 > some important information regarding TASing DELTARUNE.
 
 ## Caveats
 
-- When launching an individual chapter, the game will just quit when attempting
-  to enter chapter select or advancing to the next chapter.
 - When loading saves for any of the chapters, you may notice that the
   music/audio is gone, to fix this:
   - go to your save at `~/.config/DELTARUNE/`
@@ -85,7 +83,7 @@ $ ... nix run --impure github:MichailiK/deltarune-nix#ch1-libtas
 
 ### TAS Caveats
 
-- You must enable Settings -> Runtime -> clock_gettimg() monotonic,
+- You must enable Settings -> Runtime -> clock_gettime() monotonic,
   otherwise the game will softlock.
 - You should set the FPS target to 30 when recording TAS's.
 - libTAS does not support Wayland. If you are running a Wayland session, ensure
@@ -94,6 +92,7 @@ $ ... nix run --impure github:MichailiK/deltarune-nix#ch1-libtas
   - The `ch1-libtas`, `ch2-libtas` ... packages in this flake pass
     `QT_QPA_PLATFORM=xcb` into libTAS to ensure it runs through X11.
     DELTARUNE can currently only run through X11.
+- As stated above, chapter switching is not supported & will make the game exit.
 
 ## Q&A
 
