@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
     yoyo-games-runner.url = "github:MichailiK/yoyo-games-runner-nix";
   };
   outputs =
