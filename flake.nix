@@ -41,12 +41,15 @@
           '';
         };
       };
+
+      libtas = pkgs.callPackage ./libtas.nix {};
     in
     {
 
       packages.${system} =
         {
           default = deltaruneDefaultPkg;
+          libtas = libtas;
         }
         // forEachDeltaruneChapter (chapter: {
 
@@ -57,7 +60,7 @@
 
           "ch${chapter}-libtas" = pkgs.writeShellApplication {
             name = "deltarune-ch${chapter}-libtas";
-            runtimeInputs = [ pkgs.libtas ];
+            runtimeInputs = [ libtas ];
             # Forcing libTAS to use X11 as Wayland support is not great
             text = ''QT_QPA_PLATFORM=xcb libTAS "${deltaruneDefaultPkg}/bin/chapter${chapter}_linux/deltarune"'';
           };
