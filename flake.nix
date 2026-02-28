@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     yoyo-games-runner.url = "github:MichailiK/yoyo-games-runner-nix";
   };
   outputs =
@@ -61,7 +61,7 @@
           "ch${chapter}-libtas" = pkgs.writeShellApplication {
             name = "deltarune-ch${chapter}-libtas";
             runtimeInputs = [ libtas ];
-            # Forcing libTAS to use X11 as Wayland support is not great
+            # Forcing libTAS to use X11 as Wayland is not supported
             text = ''QT_QPA_PLATFORM=xcb libTAS "${deltaruneDefaultPkg}/bin/chapter${chapter}_linux/deltarune"'';
           };
         });

@@ -104,11 +104,18 @@ like DELTARUNE, depends on OpenSSL 1.0, which has been end-of-life since 2019.
 Insecure packages are not built for cache.nixos.org, and thus must instead
 be built locally.
 
-## Why am I building libTAS? It's in nixpkgs!
+### Why am I building curl?
 
-libTAS is packaged in nixpkgs, however, as of writing, it is behind by 1 version
-and has an issue where audio cannot be recorded. Once those are fixed in
-nixpkgs, the libTAS packages here will point to nixpkgs again.
+The YoYo Games Runner depends on
+[Debian-specific symbol versioning of `libcurl3-gnutls`](https://bugs.debian.org/1020780).
+The patches to accomedate this versioning require curl to be rebuilt locally.
+
+### Why am I building libTAS? It's in nixpkgs!
+
+libTAS is packaged in nixpkgs, however, as of writing, it is broken & doesnt
+build for some reason. Once the upstream nixpkgs gets fixed, the libTAS packages
+here will point to nixpkgs again.
+
 
 ## Special Thanks
 
