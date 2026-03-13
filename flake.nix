@@ -13,7 +13,9 @@
       nixpkgs.lib.genAttrs systems (
         system: callback nixpkgs.legacyPackages.${system}
       );
+    versionMetadata = import ./version-metadata.nix {inherit (nixpkgs) lib;};
   in {
     packages = import ./packages.nix {inherit nixpkgs yoyo-games-runner forAllSystems;};
+    inherit versionMetadata;
   };
 }

@@ -1,5 +1,6 @@
 {
-  supportedSystems = ["x86_64-linux"];
+  supportsSystem = system: system == "x86_64-linux";
+  supportsVersion = versionInfo: versionInfo.version == "1.01C";
   mkDeltarunePkgs = {
     version,
     assets,

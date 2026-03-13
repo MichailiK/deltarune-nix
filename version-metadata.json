@@ -1,0 +1,103 @@
+{
+  "steam_app_id": 1671210,
+  "steam_windows_depot_id": 1671212,
+
+  "versions": [
+    {
+      "version": "1.00",
+      "announcement_url": null,
+      "chapters": 4,
+      "nix_windows_nar_hash": "sha256-BPHoz99hQfzPTDyXHWdxw9HZXJI5THFzQO3InB0nZOs=",
+      "steam_buildid": 18701037,
+      "steam_branches": ["public"],
+      "steam_changenumber": 29374330,
+      "steam_changenumber_date": "2025-06-04T14:55:31Z",
+      "steam_windows_manifest_id": "6530852604090871226",
+      "steamdb_url": "https://steamdb.info/patchnotes/18701037/"
+    },
+    {
+      "version": "1.01A",
+      "announcement_url": "https://steamcommunity.com/games/1671210/announcements/detail/502827075746400245",
+      "chapters": 4,
+      "nix_windows_nar_hash": "sha256-+QW4U4iRgcYYgwMoulTgpeUo/LScVCmdeE0bn53S+cc=",
+      "steam_branches": ["public"],
+      "steam_buildid": 18765027,
+      "steam_changenumber": 29416482,
+      "steam_changenumber_date": "2025-06-06T11:11:33Z",
+      "steam_windows_manifest_id": "7360369116571903144",
+      "steamdb_url": "https://steamdb.info/patchnotes/18765027/"
+    },
+    {
+      "version": "1.01B",
+      "announcement_url": "https://steamcommunity.com/games/1671210/announcements/detail/502827075746400792",
+      "chapters": 4,
+      "nix_windows_nar_hash": "sha256-yK2THqMxSrByRB8hcxsakNgH4sd9VqNzDVs51C4oLPc=",
+      "steam_branches": ["public"],
+      "steam_buildid": 18782119,
+      "steam_changenumber": 29442405,
+      "steam_changenumber_date": "2025-06-08T04:25:01Z",
+      "steam_windows_manifest_id": "7730842116999772152",
+      "steamdb_url": "https://steamdb.info/patchnotes/18782119/"
+    },
+    {
+      "version": "1.01C",
+      "announcement_url": "https://steamcommunity.com/games/1671210/announcements/detail/502827075746400866",
+      "chapters": 4,
+      "nix_windows_nar_hash": "sha256-Ho1h4e96ot17IE7Y0APxhbfOm7t2zQyWw7jUt0ndQ9k=",
+      "steam_branches": ["public"],
+      "steam_buildid": 18791270,
+      "steam_changenumber": 29457098,
+      "steam_changenumber_date": "2025-06-09T07:39:07Z",
+      "steam_windows_manifest_id": "3006447521106301427",
+      "steamdb_url": "https://steamdb.info/patchnotes/18791270/"
+    },
+    {
+      "version": "1.02",
+      "announcement_url": "https://steamcommunity.com/games/1671210/announcements/detail/502828986443763623",
+      "chapters": 4,
+      "nix_windows_nar_hash": "sha256-wGPtbrjfV8ekejHNdSlYI6kWBAYByhqoLL1BD1axgVM=",
+      "steam_branches": ["public"],
+      "steam_buildid": 19139485,
+      "steam_changenumber": 29943340,
+      "steam_changenumber_date": "2025-07-08T06:04:21Z",
+      "steam_windows_manifest_id": "1738457575886606060",
+      "steamdb_url": "https://steamdb.info/patchnotes/19139485/"
+    },
+    {
+      "version": "1.03",
+      "announcement_url": "https://steamcommunity.com/games/1671210/announcements/detail/502831523307716617",
+      "chapters": 4,
+      "nix_windows_nar_hash": "sha256-9j6u9mdUnRFcFKYHc5PZ/oMJY/6ak08ySiB0siXvIXI=",
+      "steam_branches": ["public"],
+      "steam_buildid": 19322285,
+      "steam_changenumber": 30196975,
+      "steam_changenumber_date": "2025-07-23T01:01:31Z",
+      "steam_windows_manifest_id": "6956536201257221797",
+      "steamdb_url": "https://steamdb.info/patchnotes/19322285/"
+    },
+    {
+      "version": "1.04",
+      "announcement_url": "https://steamcommunity.com/games/1671210/announcements/detail/502832157038741680",
+      "chapters": 4,
+      "nix_windows_nar_hash": "sha256-qIBBFkfouk++ByJJ0/AVqhX+NyTvmimGCBhes376H1w=",
+      "steam_branches": ["public"],
+      "steam_buildid": 19477244,
+      "steam_changenumber": 30417798,
+      "steam_changenumber_date": "2025-08-05T01:28:07Z",
+      "steam_windows_manifest_id": "5291565625263756968",
+      "steamdb_url": "https://steamdb.info/patchnotes/19477244/"
+    },
+    {
+      "version": "1.05",
+      "announcement_url": null,
+      "chapters": 4,
+      "nix_windows_nar_hash": "sha256-dIzoKXlL9z+QQrYbDLGDcWfu+Kojhy++dvp+9D0eh58=",
+      "steam_branches": ["deltarune105"],
+      "steam_buildid": 19733487,
+      "steam_changenumber": 30779199,
+      "steam_changenumber_date": "2025-08-26T01:27:52Z",
+      "steam_windows_manifest_id": "8692203871714066779",
+      "steamdb_url": "https://steamdb.info/patchnotes/19733487/"
+    }
+  ]
+}
