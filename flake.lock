@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1772047000,
-        "narHash": "sha256-7DaQVv4R97cii/Qdfy4tmDZMB2xxtyIvNGSwXBBhSmo=",
+        "lastModified": 1773222311,
+        "narHash": "sha256-BHoB/XpbqoZkVYZCfXJXfkR+GXFqwb/4zbWnOr2cRcU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1267bb4920d0fc06ea916734c11b0bf004bbe17e",
+        "rev": "0590cd39f728e129122770c029970378a79d076a",
         "type": "github"
       },
       "original": {
@@ -34,11 +34,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1772047000,
-        "narHash": "sha256-7DaQVv4R97cii/Qdfy4tmDZMB2xxtyIvNGSwXBBhSmo=",
+        "lastModified": 1773222311,
+        "narHash": "sha256-BHoB/XpbqoZkVYZCfXJXfkR+GXFqwb/4zbWnOr2cRcU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1267bb4920d0fc06ea916734c11b0bf004bbe17e",
+        "rev": "0590cd39f728e129122770c029970378a79d076a",
         "type": "github"
       },
       "original": {
@@ -60,11 +60,11 @@
         "nixpkgs-openssl": "nixpkgs-openssl"
       },
       "locked": {
-        "lastModified": 1772241364,
-        "narHash": "sha256-PuK8pIEO+rW+1CwTcMriQoA/f+G690UWnm3JBNPoxZ4=",
+        "lastModified": 1773362679,
+        "narHash": "sha256-0u2cWTTrxaanhKiMfHn2rGQJ3JoB1t0w2sgHADXbD2U=",
         "owner": "MichailiK",
         "repo": "yoyo-games-runner-nix",
-        "rev": "f1409f8bbc985a88e19c3e527a40a035ec327f53",
+        "rev": "bdc1c70fa3268f35a9ad9e5d174a8cc605c86f29",
         "type": "github"
       },
       "original": {

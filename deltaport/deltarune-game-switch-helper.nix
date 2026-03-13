@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}:
+{pkgs, ...}:
 pkgs.writeShellApplication {
   name = "deltarune-game-switch-helper";
 

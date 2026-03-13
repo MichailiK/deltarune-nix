@@ -15,7 +15,6 @@
   binutils,
   makeDesktopItem,
 }:
-
 stdenv.mkDerivation (finalAttrs: {
   pname = "libtas";
   version = "1.4.6";
@@ -28,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   patches = [
-    (fetchurl { 
+    (fetchurl {
       url = "https://github.com/clementgallet/libTAS/commit/779ff0fb0f3accfc62949680d85ecf96b28d18ef.patch";
       hash = "sha256-xAaTWIXt8FkMu6GE5mBWtLypROFZ1aEqmBTtG+6rTWk=";
     })
@@ -64,18 +63,18 @@ stdenv.mkDerivation (finalAttrs: {
   postFixup = ''
     wrapProgram $out/bin/libTAS \
       --suffix PATH : ${
-        lib.makeBinPath [
-          file
-          binutils
-          ffmpeg.bin
-        ]
-      } \
+      lib.makeBinPath [
+        file
+        binutils
+        ffmpeg.bin
+      ]
+    } \
       --suffix LD_LIBRARY_PATH : ${
-        lib.makeLibraryPath [
-          ffmpeg.lib
-          xorg.libXi
-        ]
-      } \
+      lib.makeLibraryPath [
+        ffmpeg.lib
+        xorg.libXi
+      ]
+    } \
       --set-default LIBTAS_SO_PATH $out/lib/libtas.so
   '';
 
@@ -86,7 +85,7 @@ stdenv.mkDerivation (finalAttrs: {
       exec = "libTAS %U";
       icon = "libTAS";
       startupWMClass = "libTAS";
-      keywords = [ "libTAS" ];
+      keywords = ["libTAS"];
     })
   ];
 
