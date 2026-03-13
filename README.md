@@ -236,7 +236,7 @@ here will point to nixpkgs again.
 There are multiple Linux runtimes for GameMaker games. `deltarune-nix`
 currently implements two:
 
-#### [DELTARUNNER]
+#### DELTARUNNER
 
 [DELTARUNNER] is a modified GMS LTS runner that designed for DELTARUNE & its usage
 of `game_switch`.
@@ -244,7 +244,7 @@ of `game_switch`.
 It supports both x86_64 and AArch64 Linux systems, and is the preferred runtime
 for every DELTARUNE version exposed on this flake.
 
-### [deltaport]
+#### deltaport
 
 [deltaport] is a project for porting DELTARUNE version 1.01C to Linux with an
 (unmodified?) GMS LTS runner. It applies xdelta patches to the game files to
