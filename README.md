@@ -24,10 +24,10 @@ $ nix run github:MichailiK/deltarune-nix
 
 > [!IMPORTANT]
 > You will need to download the (unmodified) Windows game files of DELTARUNE
-> and add them to the Nix store. If they are not present, a quick guide will be
-> provided on how to download them.
+> and add them to the Nix store. **You will be shown a quick guide will be
+> if the game files are not present in the Nix store.**
 >
-> For troubleshooting steps or for more information, check out the
+> For more thorough instructions, check out the
 > [Download DELTARUNE](#download-deltarune) section below.
 
 Additionally, you can also launch individual chapters & individual versions,
@@ -57,30 +57,29 @@ $ nix run github:MichailiK/deltarune-nix#v1_01C-ch4-libtas
 > Make sure you read the [TAS Caveats](#tas-caveats) section below for
 > some important information regarding TASing DELTARUNE.
 
-## Downloading DELTARUNE
+## Downloading latest DELTARUNE version
 
 To download DELTARUNE, you will need to be signed in to a
 Steam account that [owns DELTARUNE](https://store.steampowered.com/app/1671210/DELTARUNE/).
 
-You have the following options for downloading DELTARUNE:
-
 > [!NOTE]
 >
-> - These instructions are applicable to **Windows and Linux* systems only.
->   macOS users must use the alternate methods below.
+> - These instructions are applicable to **Windows and Linux** systems only.
+>   macOS users must use the "[Downloading other versions](#downloading-other-versions)" 
+    method below.
 > - `deltarune-nix` currently supports **version 1.04**. If there is a newer
 >   version of DELTARUNE, it is not supported by `deltarune-nix` at the moment.
 >   - If this is the case, please [open an issue](https://github.com/MichailiK/deltarune-nix/issues).
->   - In the meantime, you are able to download the previous version. TODO LINK
+>   - In the meantime, you are able to [download the previous version](#downloading-other-versions).
 
 1. Start downloading DELTARUNE using the Steam client.
 2. Wait for the download to complete. Check the Download Manager at the bottom
    of the Steam client.
 3. Once complete, browse to the directory of the game files.
-  - At your Steam library, right click **DELTARUNE -> Properties... -> Installed
-    Files -> Browse...**
-  - Your file explorer should now open, showing the directory of DELTARUNE's
-    game files. Copy the path to this directory.
+   - At your Steam library, right click **DELTARUNE -> Properties... -> Installed
+     Files -> Browse...**
+   - Your file explorer should now open, showing the directory of DELTARUNE's
+     game files. Copy the path to this directory.
 4. Add the directory to the Nix store: `nix store add-path --name deltarune GAME_FILES_PATH`
    (replace GAME_FILES_PATH)
 
@@ -98,6 +97,14 @@ install location:
 ```sh
 $ nix store add-path --name deltarune "/mnt/c/Program Files (x86)/Steam/steamapps/common/DELTARUNE"
 ```
+
+> [!IMPORTANT]
+> Make sure that there are no mods or other files in your DELTARUNE installation.
+> `deltarune-nix` cannot recognize modified game files of DELTARUNE.
+>
+> If you are having trouble making `deltarune-nix` recognize your DELTARUNE
+> installation, please consider re-downloading DELTARUNE game files using the
+> "[Downloading other versions](#downloading-other-versions)" method below.
 
 ## Downloading other versions
 
@@ -127,17 +134,17 @@ The Steam console allows downloading old versions of DELTARUNE using its
 manifest ID. 
 
 1. Reveal the Steam console. To do this, you can either:
-  - Open `steam://open/console` in a browser to reveal the console tab & switch to it.
-  - Quit Steam & launch it again with the `-console` argument.
+   - Open `steam://open/console` in a browser to reveal the console tab & switch to it.
+   - Quit Steam & launch it again with the `-console` argument.
 2. In the console's text field, paste
    `download_depot 1671210 1671212 MANIFEST_ID` (replace MANIFEST_ID)
-3. hit enter. You should see the log message
+3. Hit enter. You should see the log message
    `Downloading depot 1671212 (123 files, 456 MB) ...`
    appear after a few seconds.
 4. Wait for the download to finish.
    Once the download is finished, you will see:
    `Depot download complete : "/home/USER/.local/share/Steam/ubuntu12_32\steamapps\content\app_1671210\depot_1671212" (manifest 1234567890123456)"`
-   logged to console. Take note of the directory path.
+   logged to the console. Take note of the directory path.
 5. Add the files to the Nix store, for example:
 
    ```sh
