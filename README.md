@@ -50,6 +50,9 @@ $ nix run github:MichailiK/deltarune-nix#v1_02-ch3
 $ nix run github:MichailiK/deltarune-nix#v1_01C-ch4-libtas
 ```
 
+For a full listing of the available packages/versions, run
+`nix flake show github:MichailiK/deltarune-nix`.
+
 > [!IMPORTANT]
 > Launching individual chapters may not allow you to switch chapters. The game
 > may exit when trying to.
