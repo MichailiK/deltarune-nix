@@ -229,13 +229,38 @@ build for some reason. Once the upstream nixpkgs gets fixed, the libTAS packages
 here will point to nixpkgs again.
 
 
-## Special Thanks
+## Other info
+
+### Runtimes
+
+There are multiple Linux runtimes for GameMaker games. `deltarune-nix`
+currently implements two:
+
+#### [DELTARUNNER]
+
+[DELTARUNNER] is a modified GMS LTS runner that designed for DELTARUNE & its usage
+of `game_switch`.
+
+It supports both x86_64 and AArch64 Linux systems, and is the preferred runtime
+for every DELTARUNE version exposed on this flake.
+
+### [deltaport]
+
+[deltaport] is a project for porting DELTARUNE version 1.01C to Linux with an
+(unmodified?) GMS LTS runner. It applies xdelta patches to the game files to
+faciliate a makeshift `game_switch` implementation by writing a file which a
+bash script watches for to faciliate the game switch.
+
+It is only compatible with x86_64 systems and version 1.01C. It is available
+under the `+deltaport` suffix in this flake's packages.
+
+### Special thanks
 
 Special thanks to the [DELTARUNNER] and [deltaport] maintainers for making this
 Nix/NixOS port possible in the first place!
 
 This is a sister project of [yoyo-games-runner-nix], a Nix flake for
-porting the GameMaker Linux runtime to Nix/NixOS systems.
+porting the GameMaker Linux runtimes to Nix/NixOS systems.
 
 [DELTARUNE]: https://deltarune.com/
 [DELTARUNNER]: https://github.com/InvoxiPlayGames/DELTARUNNER
