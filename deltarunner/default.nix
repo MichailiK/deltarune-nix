@@ -33,7 +33,7 @@
         src = "${deltarunner}/deltaRunner";
         version = version + "+deltarunner";
         gameAssets = assets;
-        includeFFmpeg = true; # Chapter 3 contains video
+        includeFFmpeg = true; # Chapters 3 and 5 contain video
       }).overrideAttrs (final: prev: {
         runtimeDependencies =
           (prev.runtimeDependencies or [])

@@ -120,8 +120,9 @@ Take note of the Manifest ID for the version you would like to download:
 
 | Version | Manifest ID | Build ID | Released |
 | ------  | ----------- | -------- | -------- |
+| **[0.0.240](https://steamcommunity.com/games/1671210/announcements/detail/689761349249532170) (LATEST)** | `2856471167011435804` | [`23736632`](https://steamdb.info/patchnotes/23736632/) | Jun 24, 2026
 | *1.05 (beta)* | *`8692203871714066779` (deltarune105)* | [`19733487`](https://steamdb.info/patchnotes/19733487/) | Aug 26, 2025
-| **[1.04](https://steamcommunity.com/games/1671210/announcements/detail/502832157038741680) (LATEST)** | `5291565625263756968` | [`19477244`](https://steamdb.info/patchnotes/19477244/) | Aug 5, 2025
+| [1.04](https://steamcommunity.com/games/1671210/announcements/detail/502832157038741680) | `5291565625263756968` | [`19477244`](https://steamdb.info/patchnotes/19477244/) | Aug 5, 2025
 | [1.03](https://steamcommunity.com/games/1671210/announcements/detail/502831523307716617) | `6956536201257221797` | [`19322285`](https://steamdb.info/patchnotes/19322285/) | Jul 23, 2025
 | [1.02](https://steamcommunity.com/games/1671210/announcements/detail/502828986443763623) | `1738457575886606060` | [`19139485`](https://steamdb.info/patchnotes/19139485/) | Jul 8, 2025
 | [1.01C](https://steamcommunity.com/games/1671210/announcements/detail/502827075746400866) | `3006447521106301427` | [`18791270`](https://steamdb.info/patchnotes/18791270/) | Jun 9, 2025
