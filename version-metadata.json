@@ -134,6 +134,18 @@
       "steam_changenumber_date": "2026-06-27T04:45:58Z",
       "steam_windows_manifest_id": "5668370237506127426",
       "steamdb_url": "https://steamdb.info/patchnotes/23942272/"
+    },
+    {
+      "version": "0.0.243",
+      "announcement_url": "https://steamcommunity.com/games/1671210/announcements/detail/689761349249533251",
+      "chapters": 5,
+      "nix_windows_nar_hash": "sha256-HTh2AUL6wA4W8SbHuCDqmn6SfyOt63CAy+cg+JWINzY=",
+      "steam_branches": ["public"],
+      "steam_buildid": 23962447,
+      "steam_changenumber": 36907938,
+      "steam_changenumber_date": "2026-06-29T08:43:41Z",
+      "steam_windows_manifest_id": "1619878865915573883",
+      "steamdb_url": "https://steamdb.info/patchnotes/23962447/"
     }
   ]
 }
