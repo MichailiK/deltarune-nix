@@ -146,6 +146,18 @@
       "steam_changenumber_date": "2026-06-29T08:43:41Z",
       "steam_windows_manifest_id": "1619878865915573883",
       "steamdb_url": "https://steamdb.info/patchnotes/23962447/"
+    },
+    {
+      "version": "0.0.244",
+      "announcement_url": null,
+      "chapters": 5,
+      "nix_windows_nar_hash": "sha256-0kWVwVuMRJLJ5L1srsQ3Z/N6oJAPRx+lMof5diQKG6w=",
+      "steam_branches": ["public"],
+      "steam_buildid": 23994151,
+      "steam_changenumber": 36956847,
+      "steam_changenumber_date": "2026-07-01T06:22:57Z",
+      "steam_windows_manifest_id": "8959018571141829552",
+      "steamdb_url": "https://steamdb.info/patchnotes/23994151/"
     }
   ]
 }
