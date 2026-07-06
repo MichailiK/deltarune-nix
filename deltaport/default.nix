@@ -9,6 +9,7 @@
     mkYoYoGamesRunner,
     libtas,
     pkgs,
+    ...
   }: let
     deltarune = pkgs.callPackage ./deltarune.nix {
       inherit version mkYoYoGamesRunner;

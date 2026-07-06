@@ -40,6 +40,7 @@
     pkgs,
   }:
     (import ./${runtimeName}).mkDeltarunePkgs {
+      inherit versionInfo;
       version = versionInfo.version;
       assets = assets;
       chapters = versionInfo.chapters;

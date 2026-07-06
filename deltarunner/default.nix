@@ -2,6 +2,7 @@
   supportsSystem = system: system == "x86_64-linux" || system == "aarch64-linux";
   supportsVersion = versionInfo: true; # every version is supported
   mkDeltarunePkgs = {
+    versionInfo,
     version,
     assets,
     chapters,
@@ -9,6 +10,7 @@
     mkYoYoGamesRunner,
     libtas,
     pkgs,
+    ...
   }: let
     system = pkgs.stdenv.hostPlatform.system;
     deltarunner =
@@ -32,7 +34,33 @@
         name = "deltarune";
         src = "${deltarunner}/deltaRunner";
         version = version + "+deltarunner";
-        gameAssets = assets;
+        gameAssets =
+          if (versionInfo.chapters < 5) then
+            assets
+          else
+            # patch chapter 5 videos to include a silent audio stream on them
+            # to prevent a softlock
+            pkgs.runCommand "deltarune-assets-patched" {} ''
+              mkdir "$out"
+              cp -r "${assets}/." "$out/"
+              chmod -R u+w "$out"
+
+              shopt -s nullglob
+              for f in "$out"/chapter5_windows/vid/*.mp4; do
+                if ffprobe -v error -select_streams a -show_entries stream=index \
+                     -of csv=p=0 "$f" | grep -q .; then
+                  continue  # already has audio, leave it
+                fi
+                tmp="$(mktemp -p "$(dirname "$f")" --suffix=.mp4)"
+                ffmpeg -nostdin -v error -y \
+                  -i "$f" \
+                  -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 \
+                  -map 0:v:0 -map 1:a:0 -shortest \
+                  -c:v copy -c:a aac \
+                  "$tmp"
+                mv -f "$tmp" "$f"
+              done
+            '';
         includeFFmpeg = true; # Chapters 3 and 5 contain video
       }).overrideAttrs (final: prev: {
         runtimeDependencies =
