@@ -118,22 +118,22 @@ either the Steam console or [DepotDownloader](https://github.com/SteamRE/DepotDo
 The following table lists all DELTARUNE versions `deltarune-nix` supports.
 Take note of the Manifest ID for the version you would like to download: 
 
-| Version | Manifest ID | Build ID | Released |
-| ------  | ----------- | -------- | -------- |
-| **[0.0.247](https://steamcommunity.com/games/1671210/announcements/detail/689761349249538291) (LATEST)** | `7477373076840518223` | [`24122389`](https://steamdb.info/patchnotes/24122389/) | Jul 9, 2026
-| 0.0.244 | `8959018571141829552` | [`23994151`](https://steamdb.info/patchnotes/23994151/) | Jul 1, 2026
-| [0.0.243](https://steamcommunity.com/games/1671210/announcements/detail/689761349249533251) | `1619878865915573883` | [`23962447`](https://steamdb.info/patchnotes/23962447/) | Jun 29, 2026
-| [0.0.242](https://steamcommunity.com/games/1671210/announcements/detail/689761349249533118) | `5668370237506127426` | [`23942272`](https://steamdb.info/patchnotes/23942272/) | Jun 27, 2026
-| [0.0.241](https://steamcommunity.com/games/1671210/announcements/detail/689761349249532439) | `4986929572195566736` | [`23909557`](https://steamdb.info/patchnotes/23909557/) | Jun 25, 2026
-| [0.0.240](https://steamcommunity.com/games/1671210/announcements/detail/689761349249532170) | `2856471167011435804` | [`23736632`](https://steamdb.info/patchnotes/23736632/) | Jun 24, 2026
-| *1.05 (beta)* | *`8692203871714066779` (deltarune105)* | [`19733487`](https://steamdb.info/patchnotes/19733487/) | Aug 26, 2025
-| [1.04](https://steamcommunity.com/games/1671210/announcements/detail/502832157038741680) | `5291565625263756968` | [`19477244`](https://steamdb.info/patchnotes/19477244/) | Aug 5, 2025
-| [1.03](https://steamcommunity.com/games/1671210/announcements/detail/502831523307716617) | `6956536201257221797` | [`19322285`](https://steamdb.info/patchnotes/19322285/) | Jul 23, 2025
-| [1.02](https://steamcommunity.com/games/1671210/announcements/detail/502828986443763623) | `1738457575886606060` | [`19139485`](https://steamdb.info/patchnotes/19139485/) | Jul 8, 2025
-| [1.01C](https://steamcommunity.com/games/1671210/announcements/detail/502827075746400866) | `3006447521106301427` | [`18791270`](https://steamdb.info/patchnotes/18791270/) | Jun 9, 2025
-| [1.01B](https://steamcommunity.com/games/1671210/announcements/detail/502827075746400792) | `7730842116999772152` | [`18782119`](https://steamdb.info/patchnotes/18782119/) | Jun 8, 2025
-| [1.01A](https://steamcommunity.com/games/1671210/announcements/detail/502827075746400245) | `7360369116571903144` | [`18765027`](https://steamdb.info/patchnotes/18765027/) | Jun 6, 2025
-| 1.00 | `6530852604090871226` | [`18701037`](https://steamdb.info/patchnotes/18701037/) | Jun 4, 2025
+| Version | Chapters | Manifest ID | Build ID | Released |
+| ------  | -------- | ----------- | -------- | -------- |
+| **[0.0.247](https://steamcommunity.com/games/1671210/announcements/detail/689761349249538291) (LATEST)** | 5 |  `7477373076840518223` | [`24122389`](https://steamdb.info/patchnotes/24122389/) | Jul 9, 2026
+| 0.0.244 | 5  | `8959018571141829552` | [`23994151`](https://steamdb.info/patchnotes/23994151/) | Jul 1, 2026
+| [0.0.243](https://steamcommunity.com/games/1671210/announcements/detail/689761349249533251) | 5 | `1619878865915573883` | [`23962447`](https://steamdb.info/patchnotes/23962447/) | Jun 29, 2026
+| [0.0.242](https://steamcommunity.com/games/1671210/announcements/detail/689761349249533118) | 5 | `5668370237506127426` | [`23942272`](https://steamdb.info/patchnotes/23942272/) | Jun 27, 2026
+| [0.0.241](https://steamcommunity.com/games/1671210/announcements/detail/689761349249532439) | 5 | `4986929572195566736` | [`23909557`](https://steamdb.info/patchnotes/23909557/) | Jun 25, 2026
+| [0.0.240](https://steamcommunity.com/games/1671210/announcements/detail/689761349249532170) | 5 | `2856471167011435804` | [`23736632`](https://steamdb.info/patchnotes/23736632/) | Jun 24, 2026
+| *1.05 (beta)* | 4 | *`8692203871714066779` (deltarune105)* | [`19733487`](https://steamdb.info/patchnotes/19733487/) | Aug 26, 2025
+| [1.04](https://steamcommunity.com/games/1671210/announcements/detail/502832157038741680) | 4 | `5291565625263756968` | [`19477244`](https://steamdb.info/patchnotes/19477244/) | Aug 5, 2025
+| [1.03](https://steamcommunity.com/games/1671210/announcements/detail/502831523307716617) | 4 | `6956536201257221797` | [`19322285`](https://steamdb.info/patchnotes/19322285/) | Jul 23, 2025
+| [1.02](https://steamcommunity.com/games/1671210/announcements/detail/502828986443763623) | 4 | `1738457575886606060` | [`19139485`](https://steamdb.info/patchnotes/19139485/) | Jul 8, 2025
+| [1.01C](https://steamcommunity.com/games/1671210/announcements/detail/502827075746400866) | 4 | `3006447521106301427` | [`18791270`](https://steamdb.info/patchnotes/18791270/) | Jun 9, 2025
+| [1.01B](https://steamcommunity.com/games/1671210/announcements/detail/502827075746400792) | 4 | `7730842116999772152` | [`18782119`](https://steamdb.info/patchnotes/18782119/) | Jun 8, 2025
+| [1.01A](https://steamcommunity.com/games/1671210/announcements/detail/502827075746400245) | 4 | `7360369116571903144` | [`18765027`](https://steamdb.info/patchnotes/18765027/) | Jun 6, 2025
+| 1.00 | 4 | `6530852604090871226` | [`18701037`](https://steamdb.info/patchnotes/18701037/) | Jun 4, 2025
 
 ### Steam client
 
