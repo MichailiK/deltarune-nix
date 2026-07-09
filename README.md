@@ -120,7 +120,8 @@ Take note of the Manifest ID for the version you would like to download:
 
 | Version | Manifest ID | Build ID | Released |
 | ------  | ----------- | -------- | -------- |
-| **0.0.244 (LATEST)** | `8959018571141829552` | [`23994151`](https://steamdb.info/patchnotes/23994151/) | Jul 1, 2026
+| **[0.0.247](https://steamcommunity.com/games/1671210/announcements/detail/689761349249538291) (LATEST)** | `7477373076840518223` | [`24122389`](https://steamdb.info/patchnotes/24122389/) | Jul 9, 2026
+| 0.0.244 | `8959018571141829552` | [`23994151`](https://steamdb.info/patchnotes/23994151/) | Jul 1, 2026
 | [0.0.243](https://steamcommunity.com/games/1671210/announcements/detail/689761349249533251) | `1619878865915573883` | [`23962447`](https://steamdb.info/patchnotes/23962447/) | Jun 29, 2026
 | [0.0.242](https://steamcommunity.com/games/1671210/announcements/detail/689761349249533118) | `5668370237506127426` | [`23942272`](https://steamdb.info/patchnotes/23942272/) | Jun 27, 2026
 | [0.0.241](https://steamcommunity.com/games/1671210/announcements/detail/689761349249532439) | `4986929572195566736` | [`23909557`](https://steamdb.info/patchnotes/23909557/) | Jun 25, 2026
