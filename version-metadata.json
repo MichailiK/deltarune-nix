@@ -151,7 +151,7 @@
       "version": "0.0.244",
       "announcement_url": null,
       "chapters": 5,
-      "nix_windows_nar_hash": "sha256-0kWVwVuMRJLJ5L1srsQ3Z/N6oJAPRx+lMof5diQKG6w=",
+      "nix_windows_nar_hash": "sha256-bpRVtaDYaoP5tU2MVGEP6Ckl/7DLIG0DJKhe+584+uM=",
       "steam_branches": ["public"],
       "steam_buildid": 23994151,
       "steam_changenumber": 36956847,
