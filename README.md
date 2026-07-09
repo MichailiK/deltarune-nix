@@ -195,10 +195,17 @@ Once done:
    (`rm -r ./depots/1671212/$BUILD_ID/.DepotDownloader`)
 
    > The `.DepotDownloader` directory MUST NOT be present in the game files.
-   > Otherwise Nix will calculate a different hash and `deltarune-nix` will fail
-   > to find the game files.
+   > Otherwise Nix will calculate a different hash from what `deltarune-nix`
+   > requires & it will fail to find the game files.
 
-2. Add the game files to the Nix store using
+2. Change the permissions of every file to include the executable bit
+   (`chmod -R +x ./depots/1671212/$BUILD_ID`)
+
+   > The executable bit MUST be set, as Nix NAR hashes consider the executable bit.
+   > Since both Steam & WSL set the executable bit on every file & directory,
+   > this project has opted into to set it for the asset NAR hash as well.  
+
+3. Add the game files to the Nix store using
    `nix store add-path --name deltarune ./depots/1671212/$BUILD_ID` (replace $BUILD_ID).
 
 Note for beta versions, you need to add another argument, `-beta $BRANCH_NAME`.
