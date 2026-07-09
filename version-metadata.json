@@ -91,7 +91,7 @@
       "version": "1.05",
       "announcement_url": null,
       "chapters": 4,
-      "nix_windows_nar_hash": "sha256-dIzoKXlL9z+QQrYbDLGDcWfu+Kojhy++dvp+9D0eh58=",
+      "nix_windows_nar_hash": "sha256-OzLt/JKFSJTA4s5wsq63vuCC8382M8t1n9gODU7sv+Q=",
       "steam_branches": ["deltarune105"],
       "steam_buildid": 19733487,
       "steam_changenumber": 30779199,
