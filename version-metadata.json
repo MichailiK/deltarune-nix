@@ -103,7 +103,7 @@
       "version": "0.0.240",
       "announcement_url": "https://steamcommunity.com/games/1671210/announcements/detail/689761349249532170",
       "chapters": 5,
-      "nix_windows_nar_hash": "sha256-+JX/T6DnxIuPQloRENhoL2Ww7ZnT0/NVaZI91+TUK8o=",
+      "nix_windows_nar_hash": "sha256-X2FI4vWALM1ADHZJ73Lt30pB4dvgLgop7+pM20q51ak=",
       "steam_branches": ["public"],
       "steam_buildid": 23736632,
       "steam_changenumber": 36808355,
