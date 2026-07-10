@@ -16,37 +16,49 @@ marked as insecure either.
 
 ## Usage
 
+> [!NOTE]
+> This project uses Nix flakes. Nix flakes are an experimental feature
+> that must be [enabled](<https://wiki.nixos.org/wiki/Flakes#Setup>) first.
+>
+> To do so, add the following to `~/.config/nix/nix.conf`:
+>
+> ```
+> experimental-features = nix-command flakes
+> ```
+
+> [!IMPORTANT]
+> WSL (Windows Subsystem for Linux) users must run DELTARUNE with
+> [NixGL](https://github.com/nix-community/nixgl) present in the path.
+> You can use e.g. `nix shell github:nix-community/nixgl` to enter a shell with
+> NixGL in the environment.
+
 You may launch DELTARUNE using the default package of this flake:
 
 ```sh
 $ nix run github:MichailiK/deltarune-nix
 ```
 
-> [!IMPORTANT]
-> You will need to download the (unmodified) Windows game files of DELTARUNE
-> and add them to the Nix store. **You will be shown a quick guide will be
-> if the game files are not present in the Nix store.**
->
-> For more thorough instructions, check out the
-> [Download DELTARUNE](#download-deltarune) section below.
+A quick guide will be shown to you if you don't have the game files in the
+Nix store yet. You may also read the [Download DELTARUNE](#download-deltarune)
+section.
 
 Additionally, you can also launch individual chapters & individual versions,
 including with [libTAS], for creating tool-assisted speedruns/superplays:
 
 ```sh
-# launch chapter 1 normally
+# launch latest version, chapter 1
 $ nix run github:MichailiK/deltarune-nix#ch1
 
-# launch chapter 1 with libTAS
+# launch latest version, chapter 1, with libTAS
 $ nix run github:MichailiK/deltarune-nix#ch1-libtas
 
 # launch patch v1.00
 $ nix run github:MichailiK/deltarune-nix#v1_00
 
-# launch chapter 3 from patch v1.02
+# launch patch v1.02, chapter 3
 $ nix run github:MichailiK/deltarune-nix#v1_02-ch3
 
-# launch chapter 4 from patch v1.01C with libTAS
+# launch patch v1.01C, chapter 4, with libTAS
 $ nix run github:MichailiK/deltarune-nix#v1_01C-ch4-libtas
 ```
 
@@ -87,6 +99,7 @@ The following table lists all DELTARUNE versions `deltarune-nix` supports.
 | [1.01A](https://steamcommunity.com/games/1671210/announcements/detail/502827075746400245) | 4 | `7360369116571903144` | [`18765027`](https://steamdb.info/patchnotes/18765027/) | Jun 6, 2025
 | 1.00 | 4 | `6530852604090871226` | [`18701037`](https://steamdb.info/patchnotes/18701037/) | Jun 4, 2025
 
+(Is a Steam version missing here? [Open an issue!](https://github.com/MichailiK/deltarune-nix/issues/new))
 
 ### Downloading latest DELTARUNE version
 
@@ -97,8 +110,8 @@ Steam account that
 > [!NOTE]
 >
 > - These instructions are applicable to **Windows and Linux** systems only.
->   macOS users must use the "[Downloading other versions](#downloading-other-versions)" 
->   method below.
+>   `deltarune-nix` expects the Windows game files.
+>   macOS users must see [Downloading other versions](#downloading-other-versions).
 > - Check the [table above](#supported-versions) to see if `deltarune-nix`
 >   supports the latest version of DELTARUNE. If there is a newer version, then
 >   it is not supported by `deltarune-nix` at the moment.
@@ -123,9 +136,9 @@ $ nix store add-path --name deltarune ~/.local/share/Steam/steamapps/common/DELT
 ```
 
 On WSL systems, you are likely using the Windows Steam client to download DELTARUNE.
-You can [access your Windows filesystem via `/mnt`](<https://learn.microsoft.com/en-us/windows/wsl/wsl-config#what-is-drvfs>)
-within WSL to add the DELTARUNE game files to the Nix store. For example,
-with the default Steam install location:
+You can access your Windows filesystem inside `/mnt` within WSL to add the
+DELTARUNE game files to the Nix store. For example,
+assuming the default Steam install location:
 
 ```sh
 $ nix store add-path --name deltarune "/mnt/c/Program Files (x86)/Steam/steamapps/common/DELTARUNE"
